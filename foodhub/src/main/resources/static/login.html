@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FoodHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Background Image Styling */
+        .bg-image {
+            background: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png') no-repeat center center/cover;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            filter: blur(6px); /* Blur effect */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen relative">
+
+    <!-- Blurred Background Image -->
+    <div class="bg-image"></div>
+    
+    
+
+    <!-- Message Display -->
+    
+    <!-- Glassmorphic Login Card -->
+    <div id="terms" class="bg-white/30 backdrop-blur-md shadow-lg rounded-2xl p-8 w-full max-w-md border border-white/30">
+        <div id="messageBoxLogin" class="hidden"></div>
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-white">Welcome Back!</h2>
+        <button id="closeBtn" class="text-2xl font-semibold text-gray-300 hover:text-gray-500">&times;</button>
+    </div>
+        
+
+        <form id="LoginForm">
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-white">Email</label>
+                <input type="email" name ="email" id="email" placeholder="Enter your email" required
+                    class="w-full px-4 py-2 border border-gray-300 bg-white/40 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-white">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required
+                    class="w-full px-4 py-2 border border-gray-300 bg-white/40 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            </div>
+
+            <div class="flex items-center justify-between mb-4">
+                <!-- <label class="flex items-center">
+                    <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <span class="ml-2 text-sm text-white">Remember me</span>
+                </label> -->
+                <a href="ForgotPassword.html" class="text-sm text-white hover:underline">Forgot password?</a>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Login
+            </button>
+        </form>
+
+            
+            <!-- Terms and Conditions -->
+            
+
+    </div>
+    <script src="./javascript/SignupValidation.js"></script>
+    <script src="./javascript/LoginValidation.js"></script>
+    <script src="./javascript/ForgotPassword.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader-overlay" class="hidden">
+        <div id="loader">
+            <img src="./images/Youtube_loading_symbol_1_(wobbly).gif" alt="Loading...">
+        </div>
+    </div>
+    <!-- Blur Overlay -->
+    <div class="overlay">
+        <!-- Sign-Up Modal -->
+        <div class="signup-container">
+
+            <!-- Message Display -->
+            <div id="messageBox" class="hidden"></div>
+
+            <!-- Close Button -->
+            <div class="header">
+                <h2>Sign up</h2>
+                <button id="closeBtn" class="text-xl font-semibold text-gray-500 hover:text-gray-700">&times;</button>
+            </div>
+
+            <!-- Input Fields -->
+            <form id="signupForm">
+                <input type="text" name="name" placeholder="Full Name" required class="input-field">
+                <input type="email" name="email" placeholder="Email" required class="input-field">
+                <input type="password" name="password" placeholder="Password" required class="input-field">
+                <input type="number" name="phone" placeholder="Phone number" required class="input-field">
+                <input type="text" name="address" placeholder="Address" required class="input-field">
+            
+                <div class="terms">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">
+                        I agree to FoodHub's 
+                        <a href="">Terms of Service</a>, 
+                        <a href="">Privacy Policy</a>, and 
+                        <a href="">Content Policies</a>
+                    </label>
+                </div>
+            
+                <button type="submit" id="createAccountBtn" disabled class="disabled-btn">
+                    Create account
+                </button>
+            </form>
+
+            
+
+            <!-- OR Divider -->
+            <div class="divider">
+                <hr> <span>or</span> <hr>
+            </div>
+
+            <!-- Google Sign-in Button -->
+            <button id="signInWithGoogle" class="google-signin">
+                <img src="images/google.png" alt="Google Logo">
+                Sign in with Google
+            </button>
+        </div>
+    </div>
+
+    <script src="./javascript/SignupValidation.js"></script>
+</body>
+</html>
